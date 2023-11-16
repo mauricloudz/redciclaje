@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+#navbar-toggler {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.navbar-nav {
+    background-color: #333;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.navbar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav ul li {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.navbar-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.contenido {
+    flex-grow: 1;
+    height: 100vh;
+    overflow: auto;
+}
+
+.pestaña {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.pestaña.mostrar {
+    opacity: 1;
+    height: auto;
+}
+
+#google-map-container {
+    width: 100%;
+    height: 100vh; /* Ajusta la altura al 100% de la ventana */
+    position: relative;
+}
+
+#google-map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
