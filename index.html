@@ -10,35 +10,42 @@
 
     <div class="container-fluid">
         <div class="navbar">
-            <button id="navbar-toggler">☰ Menú</button>
+            <button id="navbar-toggler">☰</button>
+        </div>
+
+        <div class="navbar-nav-container">
+            <!-- Contenido de la barra de navegación -->
+            <div id="navbarNav" class="navbar-nav">
+                <ul>
+                    <li><a href="#" onclick="cambiarPestana('mapa')">MAPA</a></li>
+                    <li><a href="#" onclick="cambiarPestana('buscador')">BUSCADOR</a></li>
+                    <li><a href="#" onclick="cambiarPestana('beneficios')">BENEFICIOS</a></li>
+                    <li><a class="cerrar-sesion" href="#" onclick="cambiarPestana('logout')">CERRAR SESION</a></li>
+                </ul>
+            </div>
         </div>
 
         <div id="app" class="app">
-            <div id="navbarNav" class="navbar-nav">
-                <ul>
-                    <li><a href="#" onclick="cambiarPestana('inicio')">Inicio</a></li>
-                    <li><a href="#" onclick="cambiarPestana('mapa')">Mapa</a></li>
-                    <li><a href="#" onclick="cambiarPestana('registro')">Registro/Login</a></li>
-                </ul>
-            </div>
-
-            <div id="contenido" class="contenido">
-                <div id="inicio" class="pestaña">
-                    <h2>Puntos de Reciclaje</h2>
-                </div>
-
-                <div id="mapa" class="pestaña">
-                    <!-- Contenedor para el mapa -->
-                    <div id="google-map-container">
-                        <div id="google-map"></div>
-                    </div>
-                </div>
-
-                <div id="registro" class="pestaña">
-                    <h2>Registro/Login</h2>
+            <!-- Contenido de la aplicación -->
+            <div id="mapa" class="pestaña">
+                <!-- Contenedor para el mapa -->
+                <div id="google-map-container">
+                    <div id="google-map"></div>
                 </div>
             </div>
-        </div>
+            
+            <div id="buscador" class="pestaña">
+                <img src="images\buscador.png" alt="buscador">
+            </div>
+            
+            <div id="beneficios" class="pestaña">
+                <img src="images\benenficios.png" alt="beneficios">
+            </div>
+
+            <div id="logout" class="pestaña">
+                <img src="images\login.png" alt="beneficios">
+            </div>
+        </div>            
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGFgFYw6Gmq03Guw-4ttcd5p8YGpgO_vI&callback=inicializarMapa" defer></script>
